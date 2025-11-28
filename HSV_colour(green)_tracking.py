@@ -14,7 +14,7 @@ while True :
         upper_green = (85, 255, 255)
         mask = cv2.inRange(hsv_frame, lower_green , upper_green)
 
-        contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL , cv2.CHAIN_APPROX_SIMPLE)
         for cnt in contours:
             area = cv2.contourArea(cnt)
             if area > 500:
